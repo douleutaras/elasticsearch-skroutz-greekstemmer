@@ -1,6 +1,8 @@
 SkroutzGreekStemmer plugin for ElasticSearch
 ===========================================
 
+Build status: [![build_status](https://travis-ci.org/douleutaras/elasticsearch-skroutz-greekstemmer.svg?branch=master)](https://travis-ci.org/douleutaras/elasticsearch-skroutz-greekstemmer)
+
 This plugin is based on the GreekStemmer that is included in Apache Lucene.
 
 Lucene's GreekStemmer is created according to _Development of a Stemmer for

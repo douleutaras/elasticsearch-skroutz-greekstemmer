@@ -11,8 +11,8 @@ import org.apache.lucene.analysis.el.GreekLowerCaseFilter;
 import org.apache.lucene.analysis.CharArrayMap;
 import org.apache.lucene.analysis.CharArraySet;
 
+import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.elasticsearch.common.logging.ESLoggerFactory;
 import org.yaml.snakeyaml.Yaml;
 
 /**
@@ -65,8 +65,7 @@ public class SkroutzGreekStemmer {
   private CharArraySet protectedWords = CharArraySet.EMPTY_SET;
   private CharArrayMap<char[]> stepZeroExceptions = CharArrayMap.emptyMap();
 
-  protected final Logger logger = ESLoggerFactory.getLogger
-          (SkroutzGreekStemmer.class.getName());
+  protected final Logger logger = LogManager.getLogger(SkroutzGreekStemmer.class.getName());
 
   public SkroutzGreekStemmer() {
     try {

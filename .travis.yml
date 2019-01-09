@@ -1,0 +1,14 @@
+language: java
+
+before_deploy:
+  - mvn package
+
+deploy:
+  provider: releases
+  api_key:
+    secure: prbjJmdS6lK9WjNtzeS0zXKNvzS36zxALZn+CCMmN/fEzJkEBuCit+57gFlQlTkvn1P1bK5IkuDGQlQf8mNKaXftIOX22aL/agyzYthgWR3O2pReQEMHDEGCQZQjN2xploLenHfUjsQduN2ZcH1fSY93MBDTozR7LRLPJVd3PYSJdjWiq3TMgpyN9GgxfChHvDwlvuWg/nqxzW1iJIILvkrTi2pmGbEVh+rAtxmgz3qd7CRpt5ZDZBcYFxHbZdqGCSVzz2DaNfTv0UT5tBamliue04tOh9NFA7mOeyK2EfMJhv/7Xc3nTPrv0U6jrspbR94w0xLoTTLgZsBsl5TNUOl0Ot8KPjVXOwHcLX1lsHhNmOwCuk9s37h5toTgS4SVprDdPe2kCM047EwGiM8OFVXnjwzHtv+uUg9OXzGVRdIBWSbceF2fZuXADFAicKE50XHFPo8NGFejmppm0n3kWkvqA+Y9bRJeObuvyVKQxcRpbv8dVA5JIm84n4/3IU0u7fWbu02xVvUcQ3TK0v1LLWIRJCIw5LnjKqnMwvu82fX/2jQLg6t63vWZQy2nyg30REEE0K9nl1497CxY2T5PunwRcoTSVkfm7oBZYE0omi11P6SS3igXHsiALY7xy7FDdQU1OQCNgD0kktAEJVPoz5g8rboNsTtBwDsG1kpu448=
+  file_glob: true
+  file: target/releases/*
+  skip_cleanup: true
+  on:
+    tags: true
